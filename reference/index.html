@@ -1,0 +1,6181 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../analysis_details/">
+      
+      
+        <link rel="next" href="../examples/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>API documentation - GENIE Python Module Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#genie.genie" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GENIE Python Module Documentation" class="md-header__button md-logo" aria-label="GENIE Python Module Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GENIE Python Module Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GENIE Python Module Documentation" class="md-nav__button md-logo" aria-label="GENIE Python Module Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    GENIE Python Module Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation Home Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python_env/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GENIE data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            GENIE data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Downloading GENIE data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotating mutations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Package documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Package documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Package overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis_details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analysis Details
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    API documentation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    API documentation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie" class="md-nav__link">
+    <span class="md-ellipsis">
+      genie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.CNA" class="md-nav__link">
+    <span class="md-ellipsis">
+      CNA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CNA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.CNA.get_cna" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cna()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_aux_file_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_aux_file_name()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_cache_file_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cache_file_name()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_case_list_file_names" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_case_list_file_names()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_config()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_data_file_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_data_file_name()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_dir()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_gene_panel_file_names" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_gene_panel_file_names()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_genie_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_genie_dir()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_genie_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_genie_version()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_meta_file_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_meta_file_name()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.load_aux_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_aux_file()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.load_data_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_data_file()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.load_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_file()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Genie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genie
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.aggregate_to_amino_acid_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      aggregate_to_amino_acid_level()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.aggregate_to_gene_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      aggregate_to_gene_level()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.append_patient_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      append_patient_info()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.append_sample_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      append_sample_info()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_amino_acid_level_frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_amino_acid_level_frequencies()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_annotated_unique_mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_annotated_unique_mutations()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_cancer_subtype_sample_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cancer_subtype_sample_counts()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_cancer_subtypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cancer_subtypes()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_cancer_type_patient_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cancer_type_patient_counts()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_cancer_types" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cancer_types()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_gene_level_frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_gene_level_frequencies()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_imputed_sample_mutation_profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_imputed_sample_mutation_profiles()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_nucleic_acid_level_frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_nucleic_acid_level_frequencies()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_sample_mutation_profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_sample_mutation_profiles()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_tmb" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_tmb()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      summary()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Merger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merger
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Merger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Merger.deep_merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      deep_merge()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mutations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Mutations.get_detected_mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_detected_mutations()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Mutations.get_mutation_annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_mutation_annotations()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Mutations.get_sample_mutation_profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_sample_mutation_profiles()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Mutations.get_unique_mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_unique_mutations()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Mutations.hgvsp3_to_hgvsp1" class="md-nav__link">
+    <span class="md-ellipsis">
+      hgvsp3_to_hgvsp1()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Panel.gene_is_on_panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      gene_is_on_panel()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Panel.get_total_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_total_range()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Panel.position_is_tested" class="md-nav__link">
+    <span class="md-ellipsis">
+      position_is_tested()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Panel.range_is_tested" class="md-nav__link">
+    <span class="md-ellipsis">
+      range_is_tested()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Panel.tested_positions" class="md-nav__link">
+    <span class="md-ellipsis">
+      tested_positions()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.PanelSet" class="md-nav__link">
+    <span class="md-ellipsis">
+      PanelSet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PanelSet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.PanelSet.panels_for_mutation" class="md-nav__link">
+    <span class="md-ellipsis">
+      panels_for_mutation()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.PanelSet.panels_for_position" class="md-nav__link">
+    <span class="md-ellipsis">
+      panels_for_position()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.PanelSet.panels_for_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      panels_for_range()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.PatientInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      PatientInfo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PatientInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.PatientInfo.append_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      append_info()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.PatientInfo.get_info_for_patient" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_info_for_patient()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.SampleInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      SampleInfo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SampleInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.SampleInfo.append_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      append_info()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.SampleInfo.get_info_for_sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_info_for_sample()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.SampleInfo.get_sample_ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_sample_ids()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.TestedMutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      TestedMutations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TestedMutations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.TestedMutations.is_tested_matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_tested_matrix()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.TestedPositions" class="md-nav__link">
+    <span class="md-ellipsis">
+      TestedPositions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TestedPositions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.TestedPositions.positions_for_panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      positions_for_panel()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comments on GENIE data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Questions to be supported
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie" class="md-nav__link">
+    <span class="md-ellipsis">
+      genie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.CNA" class="md-nav__link">
+    <span class="md-ellipsis">
+      CNA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CNA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.CNA.get_cna" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cna()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_aux_file_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_aux_file_name()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_cache_file_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cache_file_name()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_case_list_file_names" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_case_list_file_names()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_config()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_data_file_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_data_file_name()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_dir()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_gene_panel_file_names" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_gene_panel_file_names()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_genie_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_genie_dir()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_genie_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_genie_version()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.get_meta_file_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_meta_file_name()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.load_aux_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_aux_file()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.load_data_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_data_file()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Configuration.load_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_file()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Genie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genie
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.aggregate_to_amino_acid_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      aggregate_to_amino_acid_level()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.aggregate_to_gene_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      aggregate_to_gene_level()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.append_patient_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      append_patient_info()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.append_sample_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      append_sample_info()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_amino_acid_level_frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_amino_acid_level_frequencies()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_annotated_unique_mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_annotated_unique_mutations()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_cancer_subtype_sample_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cancer_subtype_sample_counts()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_cancer_subtypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cancer_subtypes()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_cancer_type_patient_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cancer_type_patient_counts()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_cancer_types" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cancer_types()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_gene_level_frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_gene_level_frequencies()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_imputed_sample_mutation_profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_imputed_sample_mutation_profiles()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_nucleic_acid_level_frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_nucleic_acid_level_frequencies()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_sample_mutation_profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_sample_mutation_profiles()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.get_tmb" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_tmb()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Genie.summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      summary()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Merger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merger
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Merger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Merger.deep_merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      deep_merge()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mutations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Mutations.get_detected_mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_detected_mutations()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Mutations.get_mutation_annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_mutation_annotations()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Mutations.get_sample_mutation_profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_sample_mutation_profiles()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Mutations.get_unique_mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_unique_mutations()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Mutations.hgvsp3_to_hgvsp1" class="md-nav__link">
+    <span class="md-ellipsis">
+      hgvsp3_to_hgvsp1()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.Panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Panel.gene_is_on_panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      gene_is_on_panel()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Panel.get_total_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_total_range()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Panel.position_is_tested" class="md-nav__link">
+    <span class="md-ellipsis">
+      position_is_tested()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Panel.range_is_tested" class="md-nav__link">
+    <span class="md-ellipsis">
+      range_is_tested()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.Panel.tested_positions" class="md-nav__link">
+    <span class="md-ellipsis">
+      tested_positions()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.PanelSet" class="md-nav__link">
+    <span class="md-ellipsis">
+      PanelSet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PanelSet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.PanelSet.panels_for_mutation" class="md-nav__link">
+    <span class="md-ellipsis">
+      panels_for_mutation()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.PanelSet.panels_for_position" class="md-nav__link">
+    <span class="md-ellipsis">
+      panels_for_position()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.PanelSet.panels_for_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      panels_for_range()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.PatientInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      PatientInfo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PatientInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.PatientInfo.append_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      append_info()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.PatientInfo.get_info_for_patient" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_info_for_patient()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.SampleInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      SampleInfo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SampleInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.SampleInfo.append_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      append_info()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.SampleInfo.get_info_for_sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_info_for_sample()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.SampleInfo.get_sample_ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_sample_ids()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.TestedMutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      TestedMutations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TestedMutations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.TestedMutations.is_tested_matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_tested_matrix()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genie.genie.TestedPositions" class="md-nav__link">
+    <span class="md-ellipsis">
+      TestedPositions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TestedPositions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genie.genie.TestedPositions.positions_for_panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      positions_for_panel()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>API documentation</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="genie.genie"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.CNA" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">CNA</span><span class="p">(</span><span class="n">config</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Copy number alteration data for all samples included in GENIE.</p>
+  
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>config</code></b>
+            (<code><span title="typing.Type">Type</span>[<a class="autorefs autorefs-internal" title="genie.genie.Configuration" href="#genie.genie.Configuration">Configuration</a>]</code>)
+        –
+        <div class="doc-md-description">
+          <p>the GENIE source data configuration.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>data</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>copy number data for all samples.
+HGNC gene symbol is row index, sample id is column index. If
+CNA information is missing for a gene-sample pair, the value
+is NaN.</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.CNA.get_cna" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_cna</span><span class="p">(</span><span class="n">sample_id</span><span class="p">,</span> <span class="n">gene_symbol</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get copy number data for a single sample.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>sample_id</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>sample identifier.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>float</code>
+        –
+        <div class="doc-md-description">
+          <p>copy number (NaN if not measured).</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.Configuration" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">Configuration</span><span class="p">(</span><span class="n">genie_dir</span><span class="p">,</span> <span class="n">config_file</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Genie source data configuration.</p>
+<p>The default configuration is read from a default JSON config file
+which is part of the package. If a user config file is specified,
+it is used to update the information from the default config file.</p>
+  
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>genie_dir</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>the base directory name of the GENIE data files.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>config_file</code></b>
+            (<code>str</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>optional user config file (JSON).</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">genie</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">home</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;HOME&quot;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">genie_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">home</span><span class="p">,</span> <span class="s2">&quot;genie_data&quot;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">user_config_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">home</span><span class="p">,</span> <span class="s2">&quot;.genie_config.json&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+    <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Without a user config file (use only defaults)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">config</span> <span class="o">=</span> <span class="n">genie</span><span class="o">.</span><span class="n">Configuration</span><span class="p">(</span><span class="n">genie_dir</span><span class="p">)</span>
+</span></code></pre></div>
+    <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="c1"># With a user config file, overwriting some defaults</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">config</span> <span class="o">=</span> <span class="n">genie</span><span class="o">.</span><span class="n">Configuration</span><span class="p">(</span><span class="n">genie_dir</span><span class="p">,</span> <span class="n">user_config_file</span><span class="p">)</span>
+</span></code></pre></div>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.get_aux_file_name" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_aux_file_name</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the file name of an auxiliary data file.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>key</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>auxiliary data file identfier used in the config file.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>str</code>
+        –
+        <div class="doc-md-description">
+          <p>the file name for this auxiliary data file.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.get_cache_file_name" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_cache_file_name</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the name of the Parquet cache file.</p>
+<p>The name of the cache file is created from the original file name by
+stripping the extensions and appending the suffix '.parquet'.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>file_name</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>the name of the data file</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>str</code>
+        –
+        <div class="doc-md-description">
+          <p>the name of the cache file</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.get_case_list_file_names" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_case_list_file_names</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get all files with cast lists.</p>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>dict</code>
+        –
+        <div class="doc-md-description">
+          <p>dictionary with disease names as keys and file names as values.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.get_config" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_config</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the complete configuration data.</p>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>dict</code>
+        –
+        <div class="doc-md-description">
+          <p>complete configuration as dictionary.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.get_data_file_name" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_data_file_name</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the file name of a GENIE  data file.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>key</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>data file identfier used in the config file.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>str</code>
+        –
+        <div class="doc-md-description">
+          <p>the file name for this data file.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.get_dir" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_dir</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a directory name from the configuration.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>key</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>directory identfier used in the config file.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>str</code>
+        –
+        <div class="doc-md-description">
+          <p>directory name.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.get_gene_panel_file_names" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_gene_panel_file_names</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get all files with gene panel descriptions.</p>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>dict</code>
+        –
+        <div class="doc-md-description">
+          <p>dictionary with panel IDs as keys and file names as values.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.get_genie_dir" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_genie_dir</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the base directory of GENIE data.</p>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>str</code>
+        –
+        <div class="doc-md-description">
+          <p>base directory name for GENIE data.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.get_genie_version" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_genie_version</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the version of the GENIE release.</p>
+<p>The version is obtained from the study meta file.</p>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>str</code>
+        –
+        <div class="doc-md-description">
+          <p>release version of GENIE data.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.get_meta_file_name" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_meta_file_name</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the file name of a GENIE meta data file.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>key</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>meta data file identfier used in the config file.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>str</code>
+        –
+        <div class="doc-md-description">
+          <p>the file name for this meta file.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.load_aux_file" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">load_aux_file</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Load auxiliary data from a file or file cache.</p>
+<p>Loads a dataframe from a file. The dataframe is read from the cache
+Parquet cache file if it exists. If the cache file does not exist yet,
+it will be created so that next time loading the data will be faster.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>key</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>auxiliary file identfier used in the config file.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>the data loaded from the file or its cache.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.load_data_file" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">load_data_file</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Load GENIE data from a file or file cache.</p>
+<p>Loads a dataframe from a file. The dataframe is read from the cache
+Parquet cache file if it exists. If the cache file does not exist yet,
+it will be created so that next time loading the data will be faster.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>key</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>data file identfier used in the config file.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>the data loaded from the file or its cache.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Configuration.load_file" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">load_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Load a dataframe from a file or file cache.</p>
+<p>Loads a dataframe from a file. The dataframe is read from the cache
+Parquet cache file if it exists. If the cache file does not exist yet,
+it will be created so that next time loading the data will be faster.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>file_name</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>the name of the data file.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>the data loaded from the file or its cache.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.Genie" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">Genie</span><span class="p">(</span><span class="n">genie_dir</span><span class="p">,</span> <span class="n">config_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>This is the main class for this module, holding all GENIE data.</p>
+<p>An object of this class holds and provides all data from a Genie release.
+This includes all panels (assays) and the genomic regions tested by each
+panel, patient information, sample information, copy number data, mutation
+data.</p>
+  
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>genie_dir</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>path name of the directory with Genie data files.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>config_file</code></b>
+            (<code>str</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>path name of an optional user config file, defining
+alternative names for GENIE data files if names should change
+for future versions of GENIE.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>panel_set</code></b>
+            (<code><a class="autorefs autorefs-internal" title="genie.genie.PanelSet" href="#genie.genie.PanelSet">PanelSet</a></code>)
+        –
+        <div class="doc-md-description">
+          <p>all panels (assays) included in GENIE.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>patient_info</code></b>
+            (<code><a class="autorefs autorefs-internal" title="genie.genie.PatientInfo" href="#genie.genie.PatientInfo">PatientInfo</a></code>)
+        –
+        <div class="doc-md-description">
+          <p>clinical information about patients.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>sample_info</code></b>
+            (<code><a class="autorefs autorefs-internal" title="genie.genie.SampleInfo" href="#genie.genie.SampleInfo">SampleInfo</a></code>)
+        –
+        <div class="doc-md-description">
+          <p>sample annotations.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cna</code></b>
+            (<code><a class="autorefs autorefs-internal" title="genie.genie.CNA" href="#genie.genie.CNA">CNA</a></code>)
+        –
+        <div class="doc-md-description">
+          <p>copy number data.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>mutations</code></b>
+            (<code><a class="autorefs autorefs-internal" title="genie.genie.Mutations" href="#genie.genie.Mutations">Mutations</a></code>)
+        –
+        <div class="doc-md-description">
+          <p>mutation data.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>version</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>Genie version number.</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.aggregate_to_amino_acid_level" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">aggregate_to_amino_acid_level</span><span class="p">(</span><span class="n">sample_mutation_profiles</span><span class="p">,</span> <span class="n">gene_symbols</span><span class="p">,</span> <span class="n">universe</span><span class="o">=</span><span class="s1">&#39;ensembl&#39;</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Aggregate mutations to gene level.</p>
+<p>This function aggregates the sample mutation level profiles to amino
+acid level. Several different nucleic acid changes can lead to the same
+amino acid change. These are aggregated by this function.</p>
+<p>The <code>gene_symbols</code> argument needs to be specified because a mutation can
+affect multiple genes, so the mapping from hgvsg to gene symbol is not
+unambigious.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>sample_mutation_profiles</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>a single column dataframe with hgvsg and
+sample_id as row index and the boolean mutation status as
+column.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>gene_symbols</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>genes of interest - the hgvsgs from the the mutation
+profiles may map to multiple genes, and only the gene symbols
+from this list will be kept.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>universe</code></b>
+            (<code>str</code>, default:
+                <code>&#39;ensembl&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>one of <em>ensembl</em> and <em>mane</em>, defines which annotations
+will be used to create the mapping from hgvsg to gene symbols.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>dataframe with two-dimensional row index (hgvsp, sample_id)
+and single column with the mutation status</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.aggregate_to_gene_level" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">aggregate_to_gene_level</span><span class="p">(</span><span class="n">sample_mutation_profiles</span><span class="p">,</span> <span class="n">gene_symbols</span><span class="p">,</span> <span class="n">universe</span><span class="o">=</span><span class="s1">&#39;ensembl&#39;</span><span class="p">,</span> <span class="n">min_mutations</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Aggregate mutations to gene level.</p>
+<p>This function aggregates the sample mutation level profiles to gene
+level. A sample is called mutated for a gene if it has at least
+<code>min_mutations</code> of that gene. For oncogenes, <code>min_mutations</code> should  be
+kept at the default value of 1. For tumor suppressor genes, it may be
+desired to require at least two hits to call a sample mutated, assuming
+that the two hits would affect the two copies of that gene. Any
+filtering for the functional relevance of mutations needs to be done
+prior to calling this function.</p>
+<p>The <code>gene_symbols</code> argument needs to be specified because a mutation can
+affect multiple genes, so the mapping from hgvsg to gene symbol is not
+unambigious.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>sample_mutation_profiles</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>a single column dataframe with hgvsg and
+sample_id as row index and the boolean mutation status as
+column.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>gene_symbols</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>genes of interest - the hgvsgs from the the mutation
+profiles may map to multiple genes, and only the gene symbols
+from this list will be kept.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>universe</code></b>
+            (<code>str</code>, default:
+                <code>&#39;ensembl&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>one of <em>ensembl</em> and <em>mane</em>, defines which annotations
+will be used to create the mapping from hgvsg to gene symbols.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>min_mutations</code></b>
+            (<code>int</code>, default:
+                <code>1</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Call a gene mutated if it has at least that many
+mutations. Should be 1 for oncogenes and may be set to 2 for
+tumor suppressor genes.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>dataframe with two-dimensional row index (gene, sample_id) and
+single column with the mutation status</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.append_patient_info" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">append_patient_info</span><span class="p">(</span><span class="n">more_info</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add more columns to the patient information data.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>more_info</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>table with additional columns to be added to the patient
+information. This dataframe must have the <code>PATIENT_ID</code> as index.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>None</code>
+        –
+        <div class="doc-md-description">
+          <p>nothing</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.append_sample_info" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">append_sample_info</span><span class="p">(</span><span class="n">more_info</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add more columns to the sample information data.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>more_info</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>table with additional columns to be added to the sample
+information. This dataframe must have the <code>SAMPLE_ID</code> as index.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>None</code>
+        –
+        <div class="doc-md-description">
+          <p>nothing</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.get_amino_acid_level_frequencies" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_amino_acid_level_frequencies</span><span class="p">(</span><span class="n">gene_symbols</span><span class="p">,</span> <span class="n">hgvsgs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hgvsps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_types</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_types_to_keep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_subtypes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_subtypes_to_keep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sample_ids</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_subtype_resolution</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">extra_group_columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">universe</span><span class="o">=</span><span class="s1">&#39;ensembl&#39;</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">panel_coverage_threshold</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">impute</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get amino acid level mutation frequencies.</p>
+<p>This function returns the amino acid level mutation frequencies of the
+specified genes across either all samples or across selected samples
+after filtering based on sample ids or cancer types or cancer subtypes.
+Counts and frequencies are for patient numbers, not sample numbers. A
+patient is considered having a particular mutation if at least one
+sample of this patient has that mutation.</p>
+<p>There may be several different nucleic acid mutations leading to the
+same protein sequence change. At amino acid level, these different
+nucleic acid variants are integrated to a an amino acid level, that is,
+a sample is considered mutated for a particular amino acid change if it
+has any of the nucleic acid changes leading to that amino acid variant,
+and it is considered wild type if it has none of these mutations.</p>
+<p>The number of genes should be small, because otherwise the volume of
+results is very high and it will take very long for the function to
+return.</p>
+<p>For each mutation detected in at least one sample, it is checked for
+each sample whether the mutation was tested by the panel used for this
+sample. Samples not tested for the majority of mutation (less than
+<code>panel_coverage_threshold</code>) are not included in the returned counts and
+frequencies. For the remaining samples, missing values are imputed or
+set to wild type, depending on the <code>impute</code> argument. See
+<code>get_imputed_sample_mutation_profiles</code> for details.</p>
+<p>If the <code>cancer_types_to_keep</code> argument is specified, all cancer types
+not included in this list are summarized in the <code>other</code> category.</p>
+<p>If the <code>cancer_subtypes_to_keep</code> argument is specified, all cancer
+subtypes not included in this list are summarized in the <code>other</code>
+category.</p>
+<p>If <code>extra_group_columns</code> is specified, counts are provided for each
+value of these extra columns. One example for this is <code>PRIMARY_RACE</code>.
+The argument <code>extra_group_columns</code> needs to be provided as a dictionary,
+where the dict key is the name of the column, and the dict value is a
+list of all values of that column for which an extra row in the count
+table will be provided, while other values will be summarized as
+<code>other</code>. For example, if counts shall be returned separately for the
+"White", "Black" and "Asian" population and the remaining patients shall
+be summarized as "other", the <code>extra_group_columns</code> argument needs to be
+set to <code>{"PRIMARY_RACE": ["White", "Black", "Asian"]}</code>. If no
+aggregation to an <code>other</code> category is desired, set the dict value to
+<code>None</code>. For example, <code>{"PRIMARY_RACE": None}</code> would return separate
+counts for each race.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>gene_symbols</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>genes to include in the result.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>hgvsgs</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>keep only these hvsgs, i.e., exclude all other hgvsgs for
+the specified gene_symbols. If None, keep all hgvsgs.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>hgvsps</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>keep only these hgvsps, i.e., exclude all other hgvsps for
+the specified gene symbols. If None, keep all hgvsps.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_types</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer types to include in the result. All if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_types_to_keep</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer types not to summarize in the <em>other</em>
+category. No summarization if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_subtypes</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer subtypes to include in the result (Oncotree
+codes). All if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_subtypes_to_keep</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer subtypes not to summarize in the
+<em>other</em> category (Oncotree codes). No summarization if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>sample_ids</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Keep only these samples. No additional filtering if
+None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_subtype_resolution</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>if True, provide frequencies by cancer
+subtype, otherwise return frequencies summarized by cancer type.
+If cancer_subtypes_to_keep is specified, this is automatically
+set to True, otherwise it defaults to False.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>extra_group_columns</code></b>
+            (<code>dict</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>by default, counts are returned for each
+combination of gene symbol, cancer type (CANCER_TYPE), and
+possibly cancer subtype (ONCOTREE_CODE). If counts should be
+split by additional factors, such as PRIMARY_RACE, it can be
+added here.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>universe</code></b>
+            (<code>str</code>, default:
+                <code>&#39;ensembl&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>one of "ensembl" or "mane"; use "ensembl" (the default) to
+include the original Ensembl transcripts from GENIE, and use
+"mane" to use RefSeq MANE transcripts instead.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>precision</code></b>
+            (<code>int</code>, default:
+                <code>1</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>number of fractional digits of formatted allele frequency
+percentages.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>panel_coverage_threshold</code></b>
+            (<code>float</code>, default:
+                <code>0.8</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Exclude panels and samples profiled with
+these panels if the fraction of mutations tested by these panels
+is below that threshold. If this is set to 1, only panels that
+test all mutations are included. In that case, no imputation is
+needed. See <code>get_imputed_sample_muation_profiles</code> for details.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>impute</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Whether to impute missing values (mutations not tested). If
+this is set to False (the default), then missing values are
+replaced with wild type. See
+<code>get_imputed_sample_muation_profiles</code> for details.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>Amino acid level counts and frequencies.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.get_annotated_unique_mutations" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_annotated_unique_mutations</span><span class="p">(</span><span class="n">gene_symbols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">universe</span><span class="o">=</span><span class="s1">&#39;ensembl&#39;</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get annotated mutations for all or selected genes.</p>
+<p>This function returns a dataframe with all unique mutations found in
+at least one sample in Genie for the specified genes. If no genes are
+specified, return annotations for all genes.</p>
+<p>If the universe <em>mane</em> is specified, more than one transcript can be
+returned for a genomic variant, for example a <em>MANE Select</em> and a
+<em>MANE Plus clinical</em> variant.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>gene_symbols</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>return mutations for these genes. If not specified,
+mutations for all genes will be returned.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>universe</code></b>
+            (<code>str</code>, default:
+                <code>&#39;ensembl&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p><em>ensembl</em> or <em>mane</em>. Return annotations for Ensembl
+transcripts or for MANE transcripts.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>dataframe with annotated unique mutations.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.get_cancer_subtype_sample_counts" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_cancer_subtype_sample_counts</span><span class="p">(</span><span class="n">cancer_types</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_subtypes_to_keep</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get cancer subtypes and their sample numbers.</p>
+<p>Get the number of samples for each cancer subtype included in Genie.
+This function returns sample numbers and not patient numbers because
+quite often patients have multiple samples of the same cancer type but
+slightly different cancer subtype annotations.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.get_cancer_subtypes" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_cancer_subtypes</span><span class="p">(</span><span class="n">cancer_types</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get cancer subtypes for all or selected cancer types.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>cancer_types</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>optional list of cancer types for which to return
+cancer subtypes. If not specified, all cancer types are
+returned.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>cancer subtypes for all or specified cancer types. Cancer types as
+index of the returned dataframe, Oncotree codes and and names of
+cancer subtypes as columns.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.get_cancer_type_patient_counts" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_cancer_type_patient_counts</span><span class="p">(</span><span class="n">cancer_types_to_keep</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get cancer types and their patient numbers.</p>
+<p>Get the number of patients for each cancer type included in Genie. If
+the optional argument <code>cancer_types_to_keep</code>is specified, all other
+cancer types are summarized as <em>other</em>.</p>
+<p>The counts returned are for patients, not samples. Patients can have
+more than one sample and even more than one cancer type. Each patient
+is counted only once per cancer type, independent of the number of
+samples for that patient. However, if a patient has samples of more
+than one cancer type, the patient will be counted multiple times, once
+per cancer type. As a consequence, the sum of all counts returned by
+this function is larger than the total number of patients in Genie.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>cancer_types_to_keep</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer types not to summarized in the <em>other</em>
+category. If not specified, all cancer types will be returned.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.Series">Series</span></code>
+        –
+        <div class="doc-md-description">
+          <p>number of patients per cancer type</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.get_cancer_types" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_cancer_types</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a list of cancer type names as used in Genie.</p>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>list</code>
+        –
+        <div class="doc-md-description">
+          <p>all cancer types used in Genie.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.get_gene_level_frequencies" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_gene_level_frequencies</span><span class="p">(</span><span class="n">gene_symbols</span><span class="p">,</span> <span class="n">hgvsgs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_types</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_types_to_keep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_subtypes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_subtypes_to_keep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sample_ids</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_subtype_resolution</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">extra_group_columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">universe</span><span class="o">=</span><span class="s1">&#39;ensembl&#39;</span><span class="p">,</span> <span class="n">min_mutations</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">panel_coverage_threshold</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">impute</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a mutation frequencies of selected genes across samples.</p>
+<p>This function returns the gene level mutation frequencies of the
+specified genes across either all samples or across selected samples
+after filtering by sample ids or cancer types or cancer subtypes. Counts
+and frequencies are for patient numbers, not sample numbers. A patient
+is considered having a particular mutation if at least one sample of
+this patient has that mutation.</p>
+<p>The number of genes should be small, because otherwise the volume of
+results is very high and it will take very long for the function to
+return.</p>
+<p>For each mutation detected in at least one sample, it is checked for
+each sample whether the mutation was tested by the panel used for this
+sample. Samples not tested for the majority of mutations (less than
+<code>panel_coverage_threshold</code>) are not included in the returned counts and
+frequencies. For the remaining samples, missing values are imputed or
+set to wild type, depending on the <code>impute</code> argument. See
+<code>get_imputed_sample_mutation_profiles</code> for details. Imputation is very
+time consuming, and for large enough <code>panel_coverage_threshold</code>s the
+differences in the results are marginal, which is why imputation is
+switched off by default.</p>
+<p>If the <code>cancer_types_to_keep</code> argument is specified, all cancer types
+not included in this list are summarized in the <code>other</code> category.</p>
+<p>If the <code>cancer_subtypes_to_keep</code> argument is specified, all cancer
+subtypes not included in this list are summarized in the <code>other</code>
+category.</p>
+<p>If <code>extra_group_columns</code> is specified, counts are provided for each
+value of these extra columns from sample or patient annotations. One
+example for this is <code>PRIMARY_RACE</code>, another one is <code>SEX</code>. The argument
+<code>extra_group_columns</code> needs to be provided as a dictionary, where the
+dict key is the name of the column, and the dict value is a list of all
+values of that column for which an extra row in the count table will be
+provided, while other values will be summarized as <code>other</code>. For example,
+if counts shall be returned separately for the "White", "Black" and
+"Asian" population and the remaining patients shall be summarized as
+"other", the <code>extra_group_columns</code> argument needs to be set to
+<code>{"PRIMARY_RACE": ["White", "Black", "Asian"]}</code>. If no aggregation to an
+<code>other</code> category is desired, set the dict value to <code>None</code>. For example,
+<code>{"PRIMARY_RACE": None}</code> would return separate counts for each race.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>gene_symbols</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>genes to include in the result.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>hgvsgs</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>keep only these hvsgs, i.e., exclude all other hgvsgs for
+the specified gene_symbols. If None, keep all hgvsgs.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_types</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer types to include in the result. All if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_types_to_keep</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer types not to summarize in the <em>other</em>
+category. No summarization if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_subtypes</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer subtypes to include in the result (Oncotree
+codes). All if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_subtypes_to_keep</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer subtypes not to summarize in the
+<em>other</em> category (Oncotree codes). No summarization if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>sample_ids</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Keep only these samples. No additional filtering if
+None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_subtype_resolution</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>if True, provide frequencies by cancer
+subtype, otherwise return frequencies summarized by cancer type.
+If cancer_subtypes_to_keep is specified, this is automatically
+set to True, otherwise it defaults to False.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>extra_group_columns</code></b>
+            (<code>dict</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>by default, counts are returned for each
+combination of gene symbol, cancer type (CANCER_TYPE), and
+possibly cancer subtype (ONCOTREE_CODE). If counts should be
+split by additional factors, such as PRIMARY_RACE, it can be
+added here.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>universe</code></b>
+            (<code>str</code>, default:
+                <code>&#39;ensembl&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>one of "ensembl" or "mane"; use "ensembl" (the default) to
+include the original Ensembl transcripts from GENIE, and use
+"mane" to use RefSeq MANE transcripts instead.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>min_mutations</code></b>
+            (<code>int</code>, default:
+                <code>1</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Call a gene mutated if it has at least that many
+mutations. Should be 1 for oncogenes and may be set to 2 for
+tumor suppressor genes.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>precision</code></b>
+            (<code>int</code>, default:
+                <code>1</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>number of fractional digits of formatted allele frequency
+percentages.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>panel_coverage_threshold</code></b>
+            (<code>float</code>, default:
+                <code>0.8</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Exclude panels and samples profiled with
+these panels if the fraction of mutations tested by these panels
+is below that threshold. If this is set to 1, only panels that
+test all mutations are included. In that case, no imputation is
+needed. See <code>get_imputed_sample_muation_profiles</code> for details.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>impute</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Whether to impute missing values (mutations not tested). If
+this is set to False (the default), then missing values are
+replaced with wild type. See
+<code>get_imputed_sample_muation_profiles</code> for details.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>gene level counts and frequencies.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.get_imputed_sample_mutation_profiles" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_imputed_sample_mutation_profiles</span><span class="p">(</span><span class="n">sample_mutation_profiles</span><span class="p">,</span> <span class="n">panel_coverage_threshold</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">impute</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create a sample vs mutation matrix with imputation.</p>
+<p>This function accepts sample mutation profiles as obtained by the
+function <code>get_sample_mutation_profiles</code>. The dataframe returned by
+<code>get_sample_mutation_profiles</code> contains only values (True or False for
+MUT or WT) for those sample-mutation combinations that were actually
+tested by the panel used for a sample. For gene level aggregation, a
+full sample-vs-mutation matrix without missing values is needed.</p>
+<p>If <code>impute</code> is set to <em>Yes</em>, then this function calculates such a matrix
+using MICE (Multiple Imputation by Chained Equations) for imputing
+values. MUT is encoded as 1, WT as 0, and the imputation will result in
+a fractional number between 0 and 1 for each missing value. Random
+numbers (uniform distribution between 0 and 1) are then used to assign
+“MUT” or “WT” depending on the value of the random variable and on the
+imputed value from MICE. To be more precise, the originally missing
+value gets a “MUT” if the random number is larger than the imputed value
+from MICE, and “WT” otherwise. This way we get a full
+mutation-versus-sample matrix without missing values.</p>
+<p>Imputation is a time consuming process. For example, imputation for KRAS
+mutations in NSCLC and CRC with the default panel coverage threshold
+takes about 15 minutes. If <code>impute</code> is <em>False</em>, all missing values are
+replaced with "WT". For a large <code>panel_coverage_threshold</code>, imputation
+changes frequencies only marginally. Therefore, imputation is switched
+off by default.</p>
+<p>Please be careful when calling this function - the memory requirements
+for an all genes versus all samples matrix would most likely exceed what
+is available in the compute environment. Therefore, always work with
+subsets of genes and maybe also indications.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>sample_mutation_profiles</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>the mutation profiles as obtained by
+<code>get_sample_mutation_profiles</code>.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>panel_coverage_threshold</code></b>
+            (<code>float</code>, default:
+                <code>0.8</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Exclude panels and samples profiled with
+these panels if the fraction of mutations tested by these panels
+is below that threshold. If this is set to 1, only panels that
+test all mutations are included. In that case, no imputation is
+needed.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>impute</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Whether to impute missing values (mutations not tested). If
+this is set to False (the default), then missing values are
+replaced with wild type. Imputation takes very long (maybe
+hours), and for large <code>panel_coverage_threshold</code>s, frequencies
+don't change much, which is why imputation is switched off by
+default.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>Sample-mutation profiles with no missing values.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.get_nucleic_acid_level_frequencies" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_nucleic_acid_level_frequencies</span><span class="p">(</span><span class="n">gene_symbols</span><span class="p">,</span> <span class="n">hgvsgs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_types</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_types_to_keep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_subtypes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_subtypes_to_keep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sample_ids</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_subtype_resolution</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">extra_group_columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">universe</span><span class="o">=</span><span class="s1">&#39;ensembl&#39;</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a nucleic acid level mutation frequencies.</p>
+<p>This function returns the mutation frequencies of the specified genes
+across either all samples or across selected samples after filtering by
+sample ids or cancer types or cancer subtypes. Counts and frequencies
+are for patient numbers, not sample numbers. A patient is considered
+having a particular mutation if at least one sample of this patient has
+that mutation.</p>
+<p>The number of genes should be small, because otherwise the volume of
+results is very high and it will take very long for the function to
+return.</p>
+<p>For each mutation detected in at least one sample, it is checked for
+each sample whether the mutation was tested by the panel used for this
+sample. Samples not tested for a mutation are not included in the
+returned counts and frequencies.</p>
+<p>If the <code>cancer_types_to_keep</code> argument is specified, all cancer types
+not included in this list are summarized in the <code>other</code> category.</p>
+<p>If the <code>cancer_subtypes_to_keep</code> argument is specified, all cancer
+subtypes not included in this list are summarized in the <code>other</code>
+category.</p>
+<p>If <code>extra_group_columns</code> is specified, counts are provided for each
+value of these extra columns. One example for this is <code>PRIMARY_RACE</code>.
+The argument <code>extra_group_columns</code> needs to be provided as a dictionary,
+where the dict key is the name of the column, and the dict value is a
+list of all values of that column for which an extra row in the count
+table will be provided, while other values will be summarized as
+<code>other</code>. For example, if counts shall be returned separately for the
+"White", "Black" and "Asian" population and the remaining patients shall
+be summarized as "other", the <code>extra_group_columns</code> argument needs to
+be set to <code>{"PRIMARY_RACE": ["White", "Black", "Asian"]}</code>. If no
+aggregation to an <code>other</code> category is desired, set the dict value to
+<code>None</code>. For example, <code>{"PRIMARY_RACE": None}</code> would return separate
+counts for each race.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>gene_symbols</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>genes to include in the result.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>hgvsgs</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>keep only these hvsgs, i.e., exclude all other hgvsgs for
+the specified gene_symbols. If None, keep all hgvsgs.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_types</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer types to include in the result. All if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_types_to_keep</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer types not to summarize in the <em>other</em>
+category. No summarization if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_subtypes</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer subtypes to include in the result (Oncotree
+codes). All if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_subtypes_to_keep</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer subtypes not to summarize in the
+<em>other</em> category (Oncotree codes). No summarization if None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>sample_ids</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>Keep only these samples. No additional filtering if
+None.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_subtype_resolution</code></b>
+            (<code>bool</code>, default:
+                <code>False</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>if True, provide frequencies by cancer
+subtype, otherwise return frequencies summarized by cancer type.
+If cancer_subtypes_to_keep is specified, this is automatically
+set to True, otherwise it defaults to False.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>extra_group_columns</code></b>
+            (<code>dict</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>by default, counts are returned for each
+combination of hgvsg, cancer type (CANCER_TYPE), and possibly
+cancer subtype (ONCOTREE_CODE). If counts should be split by
+additional factors, such as PRIMARY_RACE, it can be added here.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>universe</code></b>
+            (<code>str</code>, default:
+                <code>&#39;ensembl&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>one of "ensembl" or "mane"; use "ensembl" (the default) to
+include the original Ensembl transcripts from GENIE, and use
+"mane" to use RefSeq MANE transcripts instead.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>precision</code></b>
+            (<code>int</code>, default:
+                <code>1</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>number of fractional digits of formatted allele frequency
+percentages.</p>
+        </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.get_sample_mutation_profiles" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_sample_mutation_profiles</span><span class="p">(</span><span class="n">gene_symbols</span><span class="p">,</span> <span class="n">hgvsgs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_types</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cancer_subtypes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sample_ids</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">universe</span><span class="o">=</span><span class="s1">&#39;ensembl&#39;</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a mutation profile of selected genes across samples.</p>
+<p>This function returns the mutation profile of the specified genes across
+either all samples or across selected samples, based on sample ids or
+cancer types or cancer subtypes. If more than one sample selection
+criterion is specified, then the intersection of the specified criteria
+is used to determine the final set of samples. The number of genes
+should be small, because otherwise the volume of results is very high
+and it will take very long for the function to return.</p>
+<p>For each mutation detected in at least one sample, it is checked for
+each sample whether the mutation was tested by the panel used for this
+sample. If this is the case, <code>mutated</code> is returned as "False", unless
+the mutation was in fact detected for this sample, in which case "True"
+is returned. Samples that have not been tested for a mutation are not
+included in the result.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>gene_symbols</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>genes to include in the result.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>hgvsgs</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>keep only these hvsgs, i.e., exclude all other hgvsgs for
+the specified gene_symbols. If None, keep all hgvsgs.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_types</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer types to include in the result.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>cancer_subtypes</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>cancer subtypes to include in the result (Oncotree
+codes).</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>sample_ids</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>sample identifiers to include in the result.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>universe</code></b>
+            (<code>str</code>, default:
+                <code>&#39;ensembl&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>one of "ensembl" or "mane"; use "ensembl" (the default) to
+include the original Ensembl transcripts from GENIE, and use
+"mane" to use RefSeq MANE transcripts instead.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>Mutation status (MUT or WT) for all tested mutations.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.get_tmb" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_tmb</span><span class="p">(</span><span class="n">sample_ids</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">min_genomic_range</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">tmb_intermediate_threshold</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">tmb_high_threshold</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the tumor mutational burdon (TMB) for all specified samples.</p>
+<p>The TMB is calculated by dividing the number of mutations reported for a
+sample by the total genomic range covered by the panel that is used to
+profile that sample. If the total genomic range of a panel is smaller
+than <code>min_genomic_range</code>, NA is returned.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>sample_ids</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>samples for which the TMB is to be returned. If None
+(the default), TMB is returned for all GENIE samples.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>min_genomic_range</code></b>
+            (<code>int</code>, default:
+                <code>10000</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>if the total genomic range covered by a panel
+is smaller that this value, TMB is returned as NA for all
+samples tested with such a panel.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>tmb_intermediate_threshold</code></b>
+            (<code>int</code>, default:
+                <code>6</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>samples are classified as "TMB
+intermediate" if the TMB is &gt;= this threshold but smaller than
+<code>tmb_high_threshold</code>. If it is smaller than this threshold, it
+is classified as "TMB low".</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>tmb_high_threshold</code></b>
+            (<code>int</code>, default:
+                <code>20</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>samples are classified as "TMB high" if the TMB
+is &gt;= this threshold.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>Table with the mutation count, size of genomic range covered, TMB,
+and TMB_class for each sample, with SAMPLE_ID as index.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Genie.summary" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">summary</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a summary of data in this GENIE release.</p>
+<p>The summary includes the number of panels, number of patiens, number of
+samples, number of genes tested by at least one panel, the number of
+genes with copy number alterations identfied at least once.</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.Merger" class="doc doc-heading">
+          <code>Merger</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Deep merging of dictionary hierarchies.</p>
+<p>This class can be used to merge two different dictionary trees.
+This is useful, for example, to load a default configuration from
+a JSON file and merge it with a user configuration file where the defaults
+are kept for all values not overwritten by the user configuration file.</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Merger.deep_merge" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">deep_merge</span><span class="p">(</span><span class="n">dict1</span><span class="p">,</span> <span class="n">dict2</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Deep merging of two hierarchical dictionary trees.</p>
+<p>The <code>dict1</code> dictionary is updated with any information from <code>dict2</code>.
+The value of a dictionary item for a particular key can be another
+dictionary, and a <em>flat</em> merge would simply replace the dictionary item
+for that key in <code>dict1</code> with the dictionary item from <code>dict2</code>.
+Such a <em>flat</em> merge would therefore lose the information for that
+dictionary item from <code>dict1</code>. A deep merge does not drop the value of a
+dictionary item in <code>dict1</code> and replace it with the dictionary item from
+<code>dict2</code> with the same key, but instead updates the dictionary item in
+<code>dict1</code> with the information from <code>dict2</code>, changing or adding only those
+keys that are part of <code>dict2</code>.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>dict1</code></b>
+            (<code>dict</code>)
+        –
+        <div class="doc-md-description">
+          <p>the dictionary to be updated.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>dict2</code></b>
+            (<code>dict</code>)
+        –
+        <div class="doc-md-description">
+          <p>the dictionary with the update information.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>dict</code>
+        –
+        <div class="doc-md-description">
+          <p>The updated dictionary (<code>dict1</code> updated with <code>dict2</code>).</p>
+      </div>
+      </li>
+  </ul>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">genie</span><span class="o">.</span><span class="n">Merger</span><span class="o">.</span><span class="n">deep_merge</span><span class="p">(</span><span class="n">default_config</span><span class="p">,</span> <span class="n">user_config</span><span class="p">)</span>
+</span></code></pre></div>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.Meta" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">Meta</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code>dict</code></p>
+
+  
+      <p>This class is a dictionary initialized with data from a meta file.</p>
+<p>GENIE comes with several files with meta information about the actual data
+files. This class is a dictionary that is initialized with key-value pairs
+from such a meta information file.</p>
+  
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>config</code></b>
+            (<code><span title="typing.Type">Type</span>[<a class="autorefs autorefs-internal" title="genie.genie.Configuration" href="#genie.genie.Configuration">Configuration</a>]</code>)
+        –
+        <div class="doc-md-description">
+          <p>the GENIE source data configuration.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>key</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>the file name key from the config file.</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.Mutations" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">Mutations</span><span class="p">(</span><span class="n">config</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Mutation data for all samples included in GENIE.</p>
+<p>Objects of this class contain all SNVs and indels found in any sample in
+the GENIE data base.</p>
+  
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>config</code></b>
+            (<code><span title="typing.Type">Type</span>[<a class="autorefs autorefs-internal" title="genie.genie.Configuration" href="#genie.genie.Configuration">Configuration</a>]</code>)
+        –
+        <div class="doc-md-description">
+          <p>the GENIE source data configuration.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>data</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>mutation data for all samples.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>annot</code></b>
+            (<code>dict</code>)
+        –
+        <div class="doc-md-description">
+          <p>annotations of mutations derived from re-annotation
+by Nirvana. The dictionary has two keys - "ensembl" and "mane".
+annot["ensembl"] contains annotations for all Ensembl
+transcripts in GENIE (GENIE is based on Ensembl transcripts).
+annot["mane"] contains annotations for all MANE transcripts
+mapping to the mutations in GENIE.</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Mutations.get_detected_mutations" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_detected_mutations</span><span class="p">(</span><span class="n">gene_symbols</span><span class="p">,</span> <span class="n">universe</span><span class="o">=</span><span class="s1">&#39;ensembl&#39;</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get detected mutations for a list of genes.</p>
+<p>This function returns mutations that are found for a the specified genes
+in all samples included in GENIE. If a mutation is not included in the
+returned values for a particular sample, this does not mean that the
+gene is of wild type for this sample because the mutation may not be on
+the panel used for that sample.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>gene_symbols</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>list of HGNC gene symbols.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>universe</code></b>
+            (<code>str</code>, default:
+                <code>&#39;ensembl&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>one of "ensembl" or "mane"; use "ensembl" (the default) to
+include the original Ensembl transcripts from GENIE, and use
+"mane" to use RefSeq MANE transcripts instead.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>all mutations of these genes found in GENIE samples.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Mutations.get_mutation_annotations" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_mutation_annotations</span><span class="p">(</span><span class="n">hgvsgs</span><span class="p">,</span> <span class="n">universe</span><span class="o">=</span><span class="s1">&#39;ensembl&#39;</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get annotations for a list of mutations.</p>
+<p>Get Nirvana re-annotations for a list of mutations specified by HGVSG.
+The returned dataframe can include more than one row per unique genomic
+variant. For example, a locus can be a <em>downstream_gene_variant</em> for
+one gene and a <em>3_prime_UTR_variant</em> for another gene.
+Furthermore, if the <em>mane</em> universe is specified, there can be a <em>MANE
+Select</em> and one or more <em>MANE Plus Clinical</em> transcript variants
+covering the genomic location, and there can be more than one gene
+covering that location. There can be up to 15 different MANE transcripts
+for a genomic locus. It depends on the use case which if these
+transcripts shall be included in downstream analyses. Therefore, the
+user of this function needs to add appropriate filtering to the returned
+annotations.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>hgvsgs</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>list of HGVSG specifications of mutations.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>universe</code></b>
+            (<code>str</code>, default:
+                <code>&#39;ensembl&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>one of "ensembl" or "mane"; use "ensembl" (the default) to
+include the original Ensembl transcripts from GENIE, and use
+"mane" to use RefSeq MANE transcripts instead.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>Annotations for specified mutations.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Mutations.get_sample_mutation_profiles" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_sample_mutation_profiles</span><span class="p">(</span><span class="n">gene_symbols</span><span class="p">,</span> <span class="n">sample_ids</span><span class="p">,</span> <span class="n">sample_info</span><span class="p">,</span> <span class="n">tested_mutations</span><span class="p">,</span> <span class="n">universe</span><span class="o">=</span><span class="s1">&#39;ensembl&#39;</span><span class="p">,</span> <span class="n">hgvsgs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get mutation profiles of genes for all tested samples.</p>
+<p>While the function <code>get_detected_mutations</code> returns
+mutation-sample-pairs only for those samples where a mutation was
+actually detected, this function adds all samples where a mutation was
+also tested but not found. The returned dataframe contains a column
+<code>mutated</code> that is either <em>True</em> or <em>False</em>.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>gene_symbols</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>genes to include in the result</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>sample_ids</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>sample identifiers of samples to include</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>sample_info</code></b>
+            (<code><a class="autorefs autorefs-internal" title="genie.genie.SampleInfo" href="#genie.genie.SampleInfo">SampleInfo</a></code>)
+        –
+        <div class="doc-md-description">
+          <p>annnotation of all samples</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>tested_mutations</code></b>
+            (<code><a class="autorefs autorefs-internal" title="genie.genie.TestedMutations" href="#genie.genie.TestedMutations">TestedMutations</a></code>)
+        –
+        <div class="doc-md-description">
+          <p>cache providing hgvsg vs panel matrix</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>universe</code></b>
+            (<code>str</code>, default:
+                <code>&#39;ensembl&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>one of "ensembl" or "mane"; use "ensembl" (the default) to
+include the original Ensembl transcripts from GENIE, and use
+"mane" to use RefSeq MANE transcripts instead.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>hgvsgs</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>keep only these hvsgs, i.e., exclude all other hgvsgs for
+the specified gene_symbols. If None, keep all hgvsgs.</p>
+        </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Mutations.get_unique_mutations" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_unique_mutations</span><span class="p">(</span><span class="n">gene_symbols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">universe</span><span class="o">=</span><span class="s1">&#39;ensembl&#39;</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a unique list of mutations found in GENIE for a list of genes.</p>
+<p>For the <em>ensembl</em> universe, all variants affecting Ensembl transcripts
+that were included in the original GENIE mutation data file are
+returned. For the <em>mane</em> universe, only variants affecting MANE
+transcripts are returned.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>gene_symbols</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>list of genes to query.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>universe</code></b>
+            (<code>str</code>, default:
+                <code>&#39;ensembl&#39;</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>one of "ensembl" or "mane"; use "ensembl" (the default) to
+include the original Ensembl transcripts from GENIE, and use
+"mane" to use RefSeq MANE transcripts instead.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>list</code>
+        –
+        <div class="doc-md-description">
+          <p>hgvsg for all unique mutations for the specified genes.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Mutations.hgvsp3_to_hgvsp1" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">hgvsp3_to_hgvsp1</span><span class="p">(</span><span class="n">hgvsp</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Translate 3-letter amino acid codes to 1-letter amino acid codes.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>hgvsp</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>amino acid change with 3-letter amino acid codes</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>str</code>
+        –
+        <div class="doc-md-description">
+          <p>hgvsp_short with 1-letter amino acid codes</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.Panel" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">Panel</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">global_tested_positions</span><span class="p">,</span> <span class="n">global_panel_info</span><span class="p">,</span> <span class="n">panel_id</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>This class represents a panel (assay) included in GENIE.</p>
+  
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>config</code></b>
+            (<code><span title="typing.Type">Type</span>[<a class="autorefs autorefs-internal" title="genie.genie.Configuration" href="#genie.genie.Configuration">Configuration</a>]</code>)
+        –
+        <div class="doc-md-description">
+          <p>the GENIE source data configuration.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>global_tested_positions</code></b>
+            (<code><span title="typing.Type">Type</span>[<a class="autorefs autorefs-internal" title="genie.genie.TestedPositions" href="#genie.genie.TestedPositions">TestedPositions</a>]</code>)
+        –
+        <div class="doc-md-description">
+          <p>tested positions for all panels.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>global_panel_info</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>assay information for all panels.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>panel_id</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>the panel identifier.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>id</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>panel identifier.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>description</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>panel description.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>genes</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>genes on panel.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>tested_positions</code></b>
+            (<code><a class="autorefs autorefs-internal" title="genie.genie.TestedPositions" href="#genie.genie.TestedPositions">TestedPositions</a></code>)
+        –
+        <div class="doc-md-description">
+          <p>tested position for this panel.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>panel_info</code></b>
+            (<code>dict</code>)
+        –
+        <div class="doc-md-description">
+          <p>assay information for this panel.</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Panel.gene_is_on_panel" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">gene_is_on_panel</span><span class="p">(</span><span class="n">gene_symbol</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check if a gene is included in this panel.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>gene_symbol</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>HGNC gene symbol.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>bool</code>
+        –
+        <div class="doc-md-description">
+          <p>True if gene is on panel, else False.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Panel.get_total_range" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_total_range</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the overall size of genomic ranges tested by this panel.</p>
+<p>The overall size of tested genomic regions can be used to estimate TMB.</p>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>int</code>
+        –
+        <div class="doc-md-description">
+          <p>Sum of lengths of all ranges tested by this panel.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Panel.position_is_tested" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">position_is_tested</span><span class="p">(</span><span class="nb">chr</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check if a genomic position is tested by this panel.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>chr</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>chromosome.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>pos</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>position on chromosome.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>bool</code>
+        –
+        <div class="doc-md-description">
+          <p>True if position is tested by this panel, else False.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Panel.range_is_tested" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">range_is_tested</span><span class="p">(</span><span class="nb">chr</span><span class="p">,</span> <span class="n">start_pos</span><span class="p">,</span> <span class="n">end_pos</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check if a genomic range is tested by this panel.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>chr</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>chromosome.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>start_pos</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>start position of range on chromosome.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>end_pos</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>end position of range on chromosome.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>bool</code>
+        –
+        <div class="doc-md-description">
+          <p>True if entire range is tested by this panel, else False.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.Panel.tested_positions" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tested_positions</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get all tested positions for this panel.</p>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>tested positions for this panel.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.PanelSet" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">PanelSet</span><span class="p">(</span><span class="n">config</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Set of all panels included in GENIE.</p>
+  
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>config</code></b>
+            (<code><span title="typing.Type">Type</span>[<a class="autorefs autorefs-internal" title="genie.genie.Configuration" href="#genie.genie.Configuration">Configuration</a>]</code>)
+        –
+        <div class="doc-md-description">
+          <p>the GENIE source data configuration.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>panels</code></b>
+            (<code>dict</code>)
+        –
+        <div class="doc-md-description">
+          <p>all panels used by GENIE, with the panel identifier
+as key and <code>Panel</code> as value.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>tested_positions</code></b>
+            (<code><a class="autorefs autorefs-internal" title="genie.genie.TestedPositions" href="#genie.genie.TestedPositions">TestedPositions</a></code>)
+        –
+        <div class="doc-md-description">
+          <p>tested positions for all panels.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>tested_mutations</code></b>
+            (<code><a class="autorefs autorefs-internal" title="genie.genie.TestedMutations" href="#genie.genie.TestedMutations">TestedMutations</a></code>)
+        –
+        <div class="doc-md-description">
+          <p>tested mutations for all panels.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>panel_info</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>assay information for all panels.</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.PanelSet.panels_for_mutation" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">panels_for_mutation</span><span class="p">(</span><span class="n">hgvsg</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a list of all panels testing a particular mutation.</p>
+<p>This is done using the precomputed</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>hgvsg</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>mutation to be checked.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>dict</code>
+        –
+        <div class="doc-md-description">
+          <p>dictionary with panel ids as key and <code>Panel</code> objects as values
+containing all panels testing this mutation.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.PanelSet.panels_for_position" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">panels_for_position</span><span class="p">(</span><span class="nb">chr</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a list of all panels testing a genomic locaton.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>chr</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>chromosome.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>pos</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>position on chromosome.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>list</code>
+        –
+        <div class="doc-md-description">
+          <p>List of panels probing this location.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.PanelSet.panels_for_range" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">panels_for_range</span><span class="p">(</span><span class="nb">chr</span><span class="p">,</span> <span class="n">start_pos</span><span class="p">,</span> <span class="n">end_pos</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a list of all panels testing a genomic range.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>chr</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>chromosome.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>start_pos</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>start position of range.</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>end_pos</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>end position of range.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>list</code>
+        –
+        <div class="doc-md-description">
+          <p>List of panels probing this range.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.PatientInfo" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">PatientInfo</span><span class="p">(</span><span class="n">config</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Patient information for all subjects included in GENIE.</p>
+<p>Patient information includes <em>sex</em>, <em>primary race</em>, <em>ethnicity</em>,
+<em>clinical center</em>, <em>contact id</em>, <em>dod(?) id</em>, <em>year of contact</em>,
+<em>dead or alive</em>, <em>year of death</em>.</p>
+  
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>config</code></b>
+            (<code><span title="typing.Type">Type</span>[<a class="autorefs autorefs-internal" title="genie.genie.Configuration" href="#genie.genie.Configuration">Configuration</a>]</code>)
+        –
+        <div class="doc-md-description">
+          <p>the GENIE source data configuration.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>data</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>patient information for all subjects.</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.PatientInfo.append_info" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">append_info</span><span class="p">(</span><span class="n">more_info</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add more columns to the patient information data.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>more_info</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>table with additional columns to be added to the patient
+information. This dataframe must have the <code>PATIENT_ID</code> as index.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>None</code>
+        –
+        <div class="doc-md-description">
+          <p>nothing</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.PatientInfo.get_info_for_patient" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_info_for_patient</span><span class="p">(</span><span class="n">patient_id</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get patient information for a single patient.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>patient_id</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>patient identifier.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>dict</code>
+        –
+        <div class="doc-md-description">
+          <p>patient information.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.SampleInfo" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">SampleInfo</span><span class="p">(</span><span class="n">config</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Sample information for all samples included in GENIE.</p>
+<p>Sample information includes <em>patient id</em>, <em>age at sequencing</em>,
+<em>Oncotree code</em>, <em>sample type</em>, <em>sequencing assay id</em>, <em>cancer type</em>,
+<em>cancer type detailed</em>, <em>sample type detailed</em>.</p>
+  
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>config</code></b>
+            (<code><span title="typing.Type">Type</span>[<a class="autorefs autorefs-internal" title="genie.genie.Configuration" href="#genie.genie.Configuration">Configuration</a>]</code>)
+        –
+        <div class="doc-md-description">
+          <p>the GENIE source data configuration.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>data</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>sample information for all samples.</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.SampleInfo.append_info" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">append_info</span><span class="p">(</span><span class="n">more_info</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add more columns to the sample information data.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>more_info</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>table with additional columns to be added to the sample
+information. This dataframe must have the <code>SAMPLE_ID</code> as index.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>None</code>
+        –
+        <div class="doc-md-description">
+          <p>nothing</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.SampleInfo.get_info_for_sample" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_info_for_sample</span><span class="p">(</span><span class="n">sample_id</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get sample information for for a single sample.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>sample_id</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>sample identifier.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>dict</code>
+        –
+        <div class="doc-md-description">
+          <p>sample information.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.SampleInfo.get_sample_ids" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_sample_ids</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get all sample sample identifiers.</p>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code>list</code>
+        –
+        <div class="doc-md-description">
+          <p>sample identifiers</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.TestedMutations" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">TestedMutations</span><span class="p">(</span><span class="n">config</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>This class knows for each panel-mutation pair if the mutation was tested.</p>
+<p>Checking if a particular mutation was tested by a panel could be done with
+the <code>TestedPositions</code> class. However, for thousands of mutations and
+hundreds of panels this takes quite long (about a day for all mutations
+detected in GENIE samples and for all panels). Therefore, in a data
+preparation step done once for each new GENIE release, all mutations found
+in any sample are checked against all panels and a panel-mutation matrix is
+created where matrix elements are <em>True</em> if a mutation is tested by a panel,
+<em>False</em> otherwise.</p>
+<p>The <code>TestedMutations</code> class uses this precomputed cache file, loading it
+takes only about 0.5 seconds compared to the about 1 day for computing this
+on the fly.</p>
+  
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>config</code></b>
+            (<code><span title="typing.Type">Type</span>[<a class="autorefs autorefs-internal" title="genie.genie.Configuration" href="#genie.genie.Configuration">Configuration</a>]</code>)
+        –
+        <div class="doc-md-description">
+          <p>the GENIE source data configuration.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>parquet_file</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>name of parquet cache file.</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.TestedMutations.is_tested_matrix" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">is_tested_matrix</span><span class="p">(</span><span class="n">hgvsgs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">panels</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get table of mutations versus panels telling if mutation is tested.</p>
+<p>Get a table with mutations (HGVSGs) as rows and panels as columns where
+table cells are True or False depending on whether a particular mutation
+was tested by a particular panel.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>hgvsgs</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>return table for subset of these mutations (or all mutations
+if None).</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>panels</code></b>
+            (<code>list</code>, default:
+                <code>None</code>
+)
+        –
+        <div class="doc-md-description">
+          <p>return table for subset of these panels (or all
+panels if None). This can be provided as a list of panel
+identifiers or a list of Panel objects.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>table with information which mutation was tested by which panel.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="genie.genie.TestedPositions" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">TestedPositions</span><span class="p">(</span><span class="n">config</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>This class holds all tested positions for all panels.</p>
+  
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>config</code></b>
+            (<code><span title="typing.Type">Type</span>[<a class="autorefs autorefs-internal" title="genie.genie.Configuration" href="#genie.genie.Configuration">Configuration</a>]</code>)
+        –
+        <div class="doc-md-description">
+          <p>the GENIE source data configuration.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Attributes:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>data</code></b>
+            (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>tested positions for all panels.</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="genie.genie.TestedPositions.positions_for_panel" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">positions_for_panel</span><span class="p">(</span><span class="n">panel_id</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get all tested positions for a particular panel.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>panel_id</code></b>
+            (<code>str</code>)
+        –
+        <div class="doc-md-description">
+          <p>the panel identifier.</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><span title="pandas.DataFrame">DataFrame</span></code>
+        –
+        <div class="doc-md-description">
+          <p>tested positions for specified panel.</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

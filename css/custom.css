@@ -1,0 +1,4 @@
+div.doc-class:not(.first) {
+    border-top: 5px solid #9498d5;
+    margin-bottom: 50px;
+}

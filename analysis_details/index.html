@@ -1,0 +1,969 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../reference/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Analysis Details - GENIE Python Module Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analysis-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GENIE Python Module Documentation" class="md-header__button md-logo" aria-label="GENIE Python Module Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GENIE Python Module Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysis Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GENIE Python Module Documentation" class="md-nav__button md-logo" aria-label="GENIE Python Module Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    GENIE Python Module Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation Home Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python_env/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GENIE data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            GENIE data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Downloading GENIE data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotating mutations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Package documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Package documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Package overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Analysis Details
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Analysis Details
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrating mutations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating mutations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-panels-have-different-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: panels have different coverage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exact-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exact approach
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approximative-approach-1-imputation-of-missing-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approximative approach 1 - imputation of missing values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approximative-approach-2-set-missing-values-to-wild-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approximative approach 2 - set missing values to wild type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-of-the-two-approximate-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison of the two approximate approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determining-co-occurrence-of-mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Determining co-occurrence of mutations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comments on GENIE data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Questions to be supported
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrating mutations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating mutations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-panels-have-different-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: panels have different coverage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exact-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exact approach
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approximative-approach-1-imputation-of-missing-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approximative approach 1 - imputation of missing values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approximative-approach-2-set-missing-values-to-wild-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approximative approach 2 - set missing values to wild type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-of-the-two-approximate-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison of the two approximate approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determining-co-occurrence-of-mutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Determining co-occurrence of mutations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="analysis-details">Analysis Details</h1>
+<h2 id="integrating-mutations">Integrating mutations</h2>
+<h3 id="issue-panels-have-different-coverage">Issue: panels have different coverage</h3>
+<p>When multiple mutations need to be integrated, for example to derive a
+gene-level mutation status, it becomes difficult if there are functionally
+relevant mutations that are not measured by all the panels used for the patients
+in a cohort of interest.</p>
+<p>For example, some hotspot panels test only for selected mutations in target
+genes: </p>
+<p><img alt="Figure 1: Panels with low coverage" src="../images/Mutatation_matrix_figure_1.png" /></p>
+<h3 id="solution">Solution</h3>
+<p>To solve this issue, samples that are tested with panels not measuring the majority of mutations will be excluded:</p>
+<ol>
+<li>Identify all mutations found in a cohort of interest.</li>
+<li>Identify panels that do not test a predefinied minimum percentage of these
+   mutations (<code>panel_coverage_threshold</code>, default is 80%).</li>
+<li>Remove all samples tested with these panels of insufficient coverage.</li>
+</ol>
+<p>However, even high-density assays do not have identical coverage of genes or
+genomic regions:</p>
+<p><img alt="Figure 2: Panels with high coverage" src="../images/Mutatation_matrix_figure_2.png" /></p>
+<p>That is, there may still be functionally relevant mutations that are only
+measured by a subset of high-density panels. For all samples measured by other
+panels, the gene-level mutation status would be uncertain. </p>
+<p>Even worse, there may not be a single panel that measures all variants found in
+a patient cohort.</p>
+<p>To test whether this is really an issue, I examined the mutation-versus-panel
+matrix and determined for each mutation how many panels measure that variant.
+This was only done for variants that affect the amino acid sequence, as
+intergenic or intronic variants may not be reported by all panels.</p>
+<p>For example, there are 32218 amino acid modifying variants that are only
+measured by two panels. I had a closer look into one of these variants, which
+was only measured by DFCI-ONCOPANEL-3 and DFCI-ONCOPANEL-3.1. There are 22,771
+patients with samples profiled with these panels. Excluding all 149,234 patients
+profiled with other panels would not be useful. And assuming that the variant is
+wild type for all other 149,234 patients would also not be correct.</p>
+<h4 id="exact-approach">Exact approach</h4>
+<p><img alt="Figure 5: Panels with high coverage - remove panels without complete
+coverage" src="../images/Mutatation_matrix_figure_5.png" /></p>
+<p>Retain only patients profiled with panels that test for all mutations found in
+any of the patients in the cohort (set <code>panel_coverage_threshold</code> to 100%). The
+disadvantage is that the number of patients can be quite be small, resulting in
+large confidence intervals for the calculated mutation frequencies.</p>
+<h4 id="approximative-approach-1-imputation-of-missing-values">Approximative approach 1 - imputation of missing values</h4>
+<p><img alt="Figure 4: Panels with high coverage - missing values set to wild
+type" src="../images/Mutatation_matrix_figure_4.png" /></p>
+<p>Impute the mutation status of variants that were not tested by a panel using
+MICE (Multiple Imputation by Chained Equations):</p>
+<ol>
+<li>MUT is encoded as 1, WT as 0.</li>
+<li>The imputation will result in a fractional number between 0 and 1 for
+   each missing value.</li>
+<li>Random numbers (uniformly distributed between 0 and 1) are used to assign
+   “MUT” or “WT” to missing values depending on the value of the random variable
+   and on the imputed value from MICE. The originally missing value gets a “MUT”
+   if the random number is larger than the imputed value from MICE, and “WT”
+   otherwise.</li>
+</ol>
+<h4 id="approximative-approach-2-set-missing-values-to-wild-type">Approximative approach 2 - set missing values to wild type</h4>
+<p><img alt="Figure 3: Panels with high coverage - missing values
+imputed" src="../images/Mutatation_matrix_figure_3.png" /></p>
+<p>Here the assumption is that the most frequent mutations will be measured by all
+high-density panels. The remaining variants will then have lower allele
+frequencies, and the number of patients where this mutation is present but not
+detected is small. Setting the missing values to wild type will only slightly
+underestimate the true allele frequency.</p>
+<h4 id="comparison-of-the-two-approximate-approaches">Comparison of the two approximate approaches</h4>
+<p>Although imputation has the potential to provide more accurate mutation
+frequencies, it is computationally very expensive, leading to long run times. In
+many cases, the differences to the frequencies obtained when setting missing
+values to wild type (after applying the <code>panel_coverage_threshold</code>) are small
+and within the confidence interval. Therefore, for many applications it may be
+appropriate to use the faster approach of setting missing values to wild type.</p>
+<h2 id="determining-co-occurrence-of-mutations">Determining co-occurrence of mutations</h2>
+<p>It does not make sense to first identify all mutations in a cohort and then
+search for co-mutations, as this is very time-consuming and probably also
+requires too much memory space.</p>
+<p>There are different levels of co-occurrence. It could be co-occurrence at gene
+level, for example, co-occurrence of KRAS and BRAF mutations. Or, it can be and
+individual amino acid or even nucleotide variant level. For example, which genes
+have a functionally relevant mutation in samples with a KRAS G12C mutation.</p>
+<p>Therefore, here is an approach that should be feasible:</p>
+<ol>
+<li>Define a small number of genes of interest (in many cases, just one gene).</li>
+<li>Define indications of interest.</li>
+<li>Get all annotated unique mutations from entire GENIE for these gene(s) of
+   interest.</li>
+<li>Filter these mutations according to the question (for example, keep only
+   particular variants, or only variants with known or likely functional
+   impact).</li>
+<li>Identify of all samples from the indications of interest that carry at least
+   one of the filtered mutations of the gene(s) of interest, i.e. determine the
+   mutation status at gene level of all samples from the indications of interest
+   based on the filtered mutations.</li>
+<li>Find all mutations of any other genes in samples that are mutated at gene
+   level for the gene(s) of interest.</li>
+<li>Filter these mutations of other genes based on the annotation of unique
+   mutations, e.g. by keeping only protein-altering mutations. It would be
+   helpful to base this filter on the type of gene (oncogene, tumor suppressor
+   gene, other gene), but this should be the subject of a separate package to be
+   developed.</li>
+<li>Determine the gene level mutation status for all samples of the indications
+   of interest and for all genes left after filtering in the previous step. </li>
+<li>We now have the gene level mutation status for the gene(s) of interest and
+   for all other genes that are co-mutated with the gene(s) of interest in at
+   least one sample. This final result table is created by concatenating the
+   gene level mutation table for the gene(s) of interest and the gene level
+   mutation table for the co-mutated genes. Follow-up analyses depend very much
+   on the type of question, for example, are some of these co-mutated genes more
+   or less frequently mutated in the group of samples with a mutation in the
+   gene(s) of interest (Fisher's Exact Test would be appropriate here). Or
+   simply what is the frequency of mutations of the co-mutated genes in the
+   group of samples with a mutation in the gene(s) of interest.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
