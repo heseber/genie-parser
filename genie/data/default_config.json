@@ -1,0 +1,38 @@
+{
+    "dir": {
+        "case_lists": "case_lists",
+        "gene_panels": "gene_panels"
+    },
+    "data": {
+        "clinical_patient": "data_clinical_patient.txt",
+        "clinical_sample": "data_clinical_sample.txt",
+        "cna_hg19": "data_cna_hg19.txt",
+        "CNA": "data_CNA.txt",
+        "gene_matrix": "data_gene_matrix.txt",
+        "mutations_extended": "data_mutations_extended.txt",
+        "sv": "data_sv.txt",
+        "assay_information": "assay_information.txt",
+        "genomic_information": "genomic_information.txt",
+        "case_lists": "re:cases_(.*)\\.txt",
+        "gene_panels": "re:data_gene_panel_(.*)\\.txt"
+    },
+    "meta": {
+        "clinical_patient": "meta_clinical_patient.txt",
+        "clinical_sample": "meta_clinical_sample.txt",
+        "cna_hg19": "meta_cna_hg19.txt",
+        "CNA": "meta_CNA.txt",
+        "gene_matrix": "meta_gene_matrix.txt",
+        "mutations_extended": "meta_mutations_extended.txt",
+        "sv": "meta_sv.txt",
+        "study": "meta_study.txt",
+        "synapse": "SYNAPSE_METADATA_MANIFSET.tsv"
+    },
+    "aux": {
+        "annot": "genie.annot.tsv.gz",
+        "annot_ensembl": "genie.annot_ensembl.parquet",
+        "annot_mane": "genie.annot_mane.parquet",
+        "vcf_id_to_hgvsg": "genie.vcf_id_to_hgvsg.tsv.gz",
+        "mane": "MANE.GRCh38.v1.3.summary.txt.gz",
+        "panel_mut_tested": "mutation_tested_by_panel.parquet"
+    }
+}

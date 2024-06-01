@@ -1,0 +1,20 @@
+#!/bin/bash
+PROJECT_BASE=`pwd`
+SETUP="$PROJECT_BASE/setup.py"
+INIT="$PROJECT_BASE/genie/__init__.py"
+
+OLD_VERSION=$(grep 'version=' $SETUP | cut -d'"' -f 2)
+MAIN_VERSION=$(echo $OLD_VERSION | sed 's/\.[0-9]*$//')
+revisioncount=`git log --oneline | wc -l | tr -d ' '`
+VERSION="$MAIN_VERSION.$revisioncount"
+echo Version $OLD_VERSION → $VERSION
+
+SETUP_TMP=/tmp/$(basename $SETUP)
+sed "s/\(version=\"\)[^\"]*/\1$VERSION/" < $SETUP > $SETUP_TMP
+mv -f $SETUP_TMP $SETUP
+
+INIT_TMP=/tmp/$(basename $INIT)
+sed "s/\(__version__ = \"\)[^\"]*/\1$VERSION/" < $INIT > $INIT_TMP
+mv -f $INIT_TMP $INIT
+
+git add $SETUP $INIT

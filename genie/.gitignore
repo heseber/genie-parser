@@ -1,0 +1,4 @@
+__pycache__
+mytest.py
+*.c
+*.so

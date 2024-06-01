@@ -1,0 +1,53 @@
+site_name: GENIE Python Module Documentation
+
+theme:
+  name: "material"
+  features:
+    - content.code.copy
+
+plugins:
+- search
+- mkdocstrings:
+    handlers:
+      python:
+        options:
+          show_source: false
+          docstring_section_style: list
+          docstring_options:
+            ignore_init_summary: true
+          merge_init_into_class: true
+
+
+nav:
+  - Documentation Home Page: index.md
+  - Installation:
+    - Overview: installation.md
+    - Python environment: python_env.md
+    - GENIE data:
+      - Downloading GENIE data: download.md
+      - Annotating mutations: annotate.md
+  - Package documentation:
+    - Package overview: overview.md
+    - Analysis Details: analysis_details.md
+    - API documentation: reference.md
+  - Examples: examples.md
+  - Comments on GENIE data: comments.md
+  - Questions to be supported: questions.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+extra_css:
+  - css/custom.css
+
+extra:
+  include:
+    - images

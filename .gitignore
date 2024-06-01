@@ -1,0 +1,11 @@
+__pycache__
+geniev0.py
+.ipynb_checkpoints
+site
+mytest.py
+build
+dist
+genie.egg-info
+sinfo-requirements.txt
+docs/.DS_Store
+.DS_Store

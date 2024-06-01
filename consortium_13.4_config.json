@@ -1,0 +1,12 @@
+{
+    "data": {
+        "clinical_patient": "data_clinical_patient_13.4-consortium.txt",
+        "clinical_sample": "data_clinical_sample_13.4-consortium.txt",
+        "CNA": "data_CNA_13.4-consortium.txt",
+        "gene_matrix": "data_gene_matrix_13.4-consortium.txt",
+        "mutations_extended": "data_mutations_extended_13.4-consortium.txt",
+        "assay_information": "assay_information_13.4-consortium.txt",
+        "genomic_information": "genomic_information_13.4-consortium.txt",
+        "gene_panels": "re:data_gene_panel_(.*)_13\\.4-consortium\\.txt"
+    }
+}
