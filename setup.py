@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="genie",
-    version="0.1.0",
+    version="0.1.1",
     url="https://github.com/Bayer-Group/genie-parser",
     author="Henrik Seidel",
     author_email="heseber+github@mailbox.org",
@@ -16,6 +16,10 @@ setuptools.setup(
         "setuptools>=60.10.0",
         "tqdm>=4.64.0",
         "importlib_resources",
+        "pyarrow",
+        "biopython",
+        "scikit-learn",
+        "statsmodels",
     ],
     classifiers=[
         "Programming Language :: Python",
