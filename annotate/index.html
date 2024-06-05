@@ -846,8 +846,8 @@ sequence is required.</p>
 <h3 id="create-chromosome-specific-fasta-files">Create chromosome specific FASTA files</h3>
 <p>A subdirectory with one FASTA file for each chromosome needs to be provided. The
 genome FASTA file can be split into chromosome specific files using the Python
-script <code>extract_sequences.py</code> which is part of the GitHub repository of the
-Bayer GENIE project and also included here:</p>
+script <code>extract_sequences.py</code> which is part of this GitHub repository and also
+included here:</p>
 <details class="note">
 <summary>extract_sequences.py</summary>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Author: Henrik Seidel</span>
@@ -947,7 +947,7 @@ Bayer GENIE project and also included here:</p>
 <h2 id="step-2-generate-a-vcf-file-of-all-genie-mutations">Step 2: Generate a VCF file of all GENIE mutations</h2>
 <p>A VCF file is required for annotating mutations. All mutations from the GENIE
 file <code>data_mutations_extended.txt</code> will be extracted and transformed to a VCF
-file by the script <a href="https://github.com/Bayer-Group/genie.parser/blob/main/create_vcf.py"><code>create_vcf.py</code></a> which is
+file by the script <a href="https://github.com/heseber/genie.parser/blob/main/create_vcf.py"><code>create_vcf.py</code></a> which is
 part of the GitHub genie project.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -979,7 +979,7 @@ the directory location and the environment name are defined.</p>
 </span></code></pre></div>
 </div>
 <h2 id="step-4-annotate-mutations-from-the-normalized-vcf-file">Step 4: Annotate mutations from the normalized VCF file</h2>
-<p>The VCF file needs to be annotated with <em>Illumina Connected Annotations</em> (previously known as <em>Nirvana</em>). See the <a href="https://github.com/Bayer-Group/ica-parser">documentation of the <code>icaparser</code> package</a> on how to set up and use the annotator. The <code>genie</code> GitHub project contains two
+<p>The VCF file needs to be annotated with <em>Illumina Connected Annotations</em> (previously known as <em>Nirvana</em>). See the <a href="https://github.com/heseber/ica-parser">documentation of the <code>icaparser</code> package</a> on how to set up and use the annotator. The <code>genie</code> GitHub project contains two
 scripts for running the annotator - <code>run_ica.sh</code> and
 <code>run_ica_docker.sh</code>. Use one of these two scripts for annotating the VCF
 file, depending on how you installed the annotator.</p>
@@ -999,7 +999,7 @@ file, depending on how you installed the annotator.</p>
    VCF file.</li>
 </ol>
 <p>These files are created by the <strong>Jupyter notebook
-<a href="https://github.com/Bayer-Group/genie-parser/genie_create_aux_files.ipynb"><code>genie_create_aux_files.ipynb</code></a></strong> which is part of of the genie GitHub project. Please open this file in a
+<a href="https://github.com/heseber/genie-parser/genie_create_aux_files.ipynb"><code>genie_create_aux_files.ipynb</code></a></strong> which is part of of the genie GitHub project. Please open this file in a
 Jupyter server, adjust directory names as needed, and run it. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
