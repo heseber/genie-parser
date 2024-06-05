@@ -9,11 +9,11 @@ This page lists some examples on how to use the genie package.
     <tbody>
       <tr>
         <td><b>Program:</b></td>
-        <td><a href="https://github.com/heseber/genie.parser/blob/main/examples/kras_g12c.py">kras_k12c.py</a</td>
+        <td><a href="https://github.com/heseber/genie-parser/blob/main/examples/kras_g12c.py">kras_k12c.py</a</td>
       </tr>
       <tr>
         <td><b>Result:</b></td>
-        <td><a href="https://github.com/heseber/genie.parser/blob/main/examples/KRAS_G12C_GENIE_15.0.xlsx">KRAS_G12C_GENIE_15.0.xlsx</a></td>
+        <td><a href="https://github.com/heseber/genie-parser/blob/main/examples/KRAS_G12C_GENIE_15.0.xlsx">KRAS_G12C_GENIE_15.0.xlsx</a></td>
       </tr>
     </tbody>
   </table>
@@ -35,11 +35,11 @@ Frequencies are provided for each race (White, Black, Asian, other, all).
     <tbody>
       <tr>
         <td><b>Program:</b></td>
-        <td><a href="https://github.com/heseber/genie.parser/blob/main/examples/her2.py">her2.py</a</td>
+        <td><a href="https://github.com/heseber/genie-parser/blob/main/examples/her2_top.py">her2_top.py</a</td>
       </tr>
       <tr>
         <td><b>Result:</b></td>
-        <td><a href="https://github.com/heseber/genie.parser/blob/main/examples/HER2_GENIE_15.0_top_cancers.xlsx">HER2_GENIE_15.0_top_cancers.xlsx</a></td>
+        <td><a href="https://github.com/heseber/genie-parser/blob/main/examples/HER2_GENIE_15.0_top_cancers.xlsx">HER2_GENIE_15.0_top_cancers.xlsx</a></td>
       </tr>
     </tbody>
   </table>
@@ -62,11 +62,11 @@ Separate frequencies are provided for the mosts frequent subtypes of these cance
     <tbody>
       <tr>
         <td><b>Program:</b></td>
-        <td><a href="https://github.com/heseber/genie.parser/blob/main/examples/her2_with_tmb.py">her2_with_tmb.py</a</td>
+        <td><a href="https://github.com/heseber/genie-parser/blob/main/examples/her2_with_tmb.py">her2_with_tmb.py</a</td>
       </tr>
       <tr>
         <td><b>Result:</b></td>
-        <td><a href="https://github.com/heseber/genie.parser/blob/main/examples/HER2_GENIE_15.0_top_cancers_with_tmb.xlsx">HER2_GENIE_15.0_top_cancers_with_tmb.xlsx</a></td>
+        <td><a href="https://github.com/heseber/genie-parser/blob/main/examples/HER2_GENIE_15.0_top_cancers_with_tmb.xlsx">HER2_GENIE_15.0_top_cancers_with_tmb.xlsx</a></td>
       </tr>
     </tbody>
   </table>
@@ -81,11 +81,11 @@ This program creates an Excel file with the frequencies of all HER2 amino acid v
     <tbody>
       <tr>
         <td><b>Program:</b></td>
-        <td><a href="https://github.com/heseber/genie.parser/blob/main/examples/her2_andi.py">her2_andi.py</a</td>
+        <td><a href="https://github.com/heseber/genie-parser/blob/main/examples/her2.py">her2.py</a</td>
       </tr>
       <tr>
         <td><b>Result:</b></td>
-        <td><a href="https://github.com/heseber/genie.parser/blob/main/examples/HER2_GENIE_15.0_all_cancers.xlsx">HER2_GENIE_15.0_all_cancers.xlsx</a></td>
+        <td><a href="https://github.com/heseber/genie-parser/blob/main/examples/HER2_GENIE_15.0_all_cancers.xlsx">HER2_GENIE_15.0_all_cancers.xlsx</a></td>
       </tr>
     </tbody>
   </table>
@@ -100,11 +100,11 @@ This program creates an Excel file with the frequencies of all HER2 amino acid v
     <tbody>
       <tr>
         <td><b>Program:</b></td>
-        <td><a href="https://github.com/heseber/genie.parser/blob/main/examples/her2_andi_v2.py">her2_andi_v2.py</a</td>
+        <td><a href="https://github.com/heseber/genie-parser/blob/main/examples/her2_v2.py">her2_v2.py</a</td>
       </tr>
       <tr>
         <td><b>Result:</b></td>
-        <td><a href="https://github.com/heseber/genie.parser/blob/main/examples/HER2_GENIE_15.0_selected_cancers_gene_level.xlsx">HER2_GENIE_15.0_selected_cancers_gene_level.xlsx</a></td>
+        <td><a href="https://github.com/heseber/genie-parser/blob/main/examples/HER2_GENIE_15.0_selected_cancers_gene_level.xlsx">HER2_GENIE_15.0_selected_cancers_gene_level.xlsx</a></td>
       </tr>
     </tbody>
   </table>
