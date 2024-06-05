@@ -8,5 +8,5 @@ This cannot be done automatically - GIT does not allow doing this for good reaso
 
 ## `pre-commit`
 
-This script increases the version number of the nirvanaparser library
+This script increases the version number of the icaparser library
 with each commit.

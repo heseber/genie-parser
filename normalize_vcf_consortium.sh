@@ -34,7 +34,7 @@ mamba activate $ENV
 
 if ! type bcftools >/dev/null 2>&1; then
     echo "Please install bcftools in first."
-    echo "mamba activate nirvana"
+    echo "mamba activate ica-parser"
     echo "mamba install bcftools"
     exit 1
 fi

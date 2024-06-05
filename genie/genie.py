@@ -793,7 +793,7 @@ class Mutations:
         Attributes:
             data (pd.DataFrame): mutation data for all samples.
             annot (dict): annotations of mutations derived from re-annotation
-                by Nirvana. The dictionary has two keys - "ensembl" and "mane".
+                by ICA. The dictionary has two keys - "ensembl" and "mane".
                 annot["ensembl"] contains annotations for all Ensembl
                 transcripts in GENIE (GENIE is based on Ensembl transcripts).
                 annot["mane"] contains annotations for all MANE transcripts
@@ -807,7 +807,7 @@ class Mutations:
         # entries in GENIE 15.0)
         self.data = self.data[self.data.Reference_Allele != self.data.Tumor_Seq_Allele2]
 
-        # Read and merge VCF ID to Nirvana `vid` mapping table and to `hgvsg`
+        # Read and merge VCF ID to ICA `vid` mapping table and to `hgvsg`
         id_mapping = config.load_aux_file("vcf_id_to_hgvsg").loc[
             :, ["ID", "vid", "hgvsg"]
         ]
@@ -815,7 +815,7 @@ class Mutations:
         self.data = self.data.merge(id_mapping, on="ID")
         self.data = self.data.drop(columns="ID")
 
-        # Read the Nirvana annotations
+        # Read the ICA annotations
         self.annot = {}
         ens_file = config.get_aux_file_name("annot_ensembl")
         mane_file = config.get_aux_file_name("annot_mane")
@@ -1007,7 +1007,7 @@ class Mutations:
     ) -> pd.DataFrame:
         """Get annotations for a list of mutations.
 
-        Get Nirvana re-annotations for a list of mutations specified by HGVSG.
+        Get ICA re-annotations for a list of mutations specified by HGVSG.
         The returned dataframe can include more than one row per unique genomic
         variant. For example, a locus can be a *downstream\\_gene\\_variant* for
         one gene and a *3\\_prime\\_UTR\\_variant* for another gene.

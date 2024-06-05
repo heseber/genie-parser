@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="genie",
-    version="0.1.4",
+    version="0.1.5",
     url="https://github.com/heseber/genie-parser",
     author="Henrik Seidel",
     author_email="heseber+github@mailbox.org",

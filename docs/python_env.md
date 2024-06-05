@@ -31,7 +31,7 @@ Please see the [Mamba Installation Instructions](
 
     ```sh
     mamba install python pandas sinfo
-    pip install "git+https://github.com/heseber/genie.parser.git#subdirectory=genie"
+    pip install "git+https://github.com/heseber/genie-parser.git"
     ```
 
 ## Install packages and programs
@@ -44,11 +44,11 @@ Please see the [Mamba Installation Instructions](
     pip install synapseclient
     ```
 
-## Install Illumina Annotator and nirvanaparser module
+## Install Illumina Annotator and icaparser module
 
 For the normalization and annotation of mutations from GENIE, a working setup of
-the Illumina Annotator (a.k.a. Nirvana) and the in-house developed
- `nirvanaparser` model is needed. Setting up this environment is beyond the
- scope of this document, please see the [documentation of `nirvanaparser`](
- https://github.com/heseber/BDS-MutationAnnotationFiltering/tree/main/nirvana_parser
- ) for instructions.
+Illumina Connected Annotations (previously known as Nirvana) and the
+[`icaparser` module]( https://github.com/heseber/ica-parser ) is needed. Setting
+up this environment is beyond the scope of this document, please see the
+[documentation of `icaparser`]( https://github.com/heseber/ica-parser ) for
+instructions.
