@@ -30,7 +30,7 @@ for Synapse, you will need it for authentication.
     discussion on GENIE Synapse](
     https://www.synapse.org/#!Synapse:syn7222066/discussion/threadId=10045 ). To
     fix this issue, the script [`fix_gene_panels.py`](
-    https://github.com/Bayer-Group/genie.parser/blob/main/fix_gene_panels.py )
+    https://github.com/heseber/genie.parser/blob/main/fix_gene_panels.py )
     needs to be run once before using the `genie` package. This script will add
     a missing file for this panel in the `gene_panels` directory of the GENIE
     data.

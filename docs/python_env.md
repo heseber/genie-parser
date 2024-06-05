@@ -31,7 +31,7 @@ Please see the [Mamba Installation Instructions](
 
     ```sh
     mamba install python pandas sinfo
-    pip install "git+https://github.com/Bayer-Group/genie.parser.git#subdirectory=genie"
+    pip install "git+https://github.com/heseber/genie.parser.git#subdirectory=genie"
     ```
 
 ## Install packages and programs
@@ -50,5 +50,5 @@ For the normalization and annotation of mutations from GENIE, a working setup of
 the Illumina Annotator (a.k.a. Nirvana) and the in-house developed
  `nirvanaparser` model is needed. Setting up this environment is beyond the
  scope of this document, please see the [documentation of `nirvanaparser`](
- https://github.com/Bayer-Group/BDS-MutationAnnotationFiltering/tree/main/nirvana_parser
+ https://github.com/heseber/BDS-MutationAnnotationFiltering/tree/main/nirvana_parser
  ) for instructions.

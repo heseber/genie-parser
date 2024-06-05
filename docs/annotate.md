@@ -48,8 +48,8 @@ sequence is required.
 
 A subdirectory with one FASTA file for each chromosome needs to be provided. The
 genome FASTA file can be split into chromosome specific files using the Python
-script `extract_sequences.py` which is part of the GitHub repository of the
-Bayer GENIE project and also included here:
+script `extract_sequences.py` which is part of this GitHub repository and also
+included here:
 
 ??? note "extract_sequences.py"
     ```python
@@ -154,7 +154,7 @@ Required directory structure:
 A VCF file is required for annotating mutations. All mutations from the GENIE
 file `data_mutations_extended.txt` will be extracted and transformed to a VCF
 file by the script [`create_vcf.py`](
-https://github.com/Bayer-Group/genie.parser/blob/main/create_vcf.py ) which is
+https://github.com/heseber/genie.parser/blob/main/create_vcf.py ) which is
 part of the GitHub genie project.
 
 !!! warning
@@ -193,7 +193,7 @@ of the annotator.
 ## Step 4: Annotate mutations from the normalized VCF file
 
 The VCF file needs to be annotated with *Illumina Connected Annotations* (previously known as *Nirvana*). See the [documentation of the `icaparser` package](
-https://github.com/Bayer-Group/ica-parser) on how to set up and use the annotator. The `genie` GitHub project contains two
+https://github.com/heseber/ica-parser) on how to set up and use the annotator. The `genie` GitHub project contains two
 scripts for running the annotator - `run_ica.sh` and
 `run_ica_docker.sh`. Use one of these two scripts for annotating the VCF
 file, depending on how you installed the annotator.
@@ -217,7 +217,7 @@ The results of the annotator will be used to create two auxiliary files:
 
 These files are created by the **Jupyter notebook
 [`genie_create_aux_files.ipynb`](
-https://github.com/Bayer-Group/genie-parser/genie_create_aux_files.ipynb
+https://github.com/heseber/genie-parser/genie_create_aux_files.ipynb
 )** which is part of of the genie GitHub project. Please open this file in a
 Jupyter server, adjust directory names as needed, and run it. 
 

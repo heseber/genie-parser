@@ -2,8 +2,8 @@ import setuptools
 
 setuptools.setup(
     name="genie",
-    version="0.1.2",
-    url="https://github.com/Bayer-Group/genie-parser",
+    version="0.1.3",
+    url="https://github.com/heseber/genie-parser",
     author="Henrik Seidel",
     author_email="heseber+github@mailbox.org",
     description="Working with data from the AACR GENIE project",
