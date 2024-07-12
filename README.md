@@ -3,7 +3,7 @@
 **Original author of this package: Henrik Seidel (heseber)**
 
 This Python module is for working with data from the AACR genie project. Please
-see the docmentation at https://heseber.github.io/genie-parser/ for details.
+see the documentation at https://heseber.github.io/genie-parser/ for details.
 
 !!! warning
 
