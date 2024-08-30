@@ -5,11 +5,10 @@
 This Python module is for working with data from the AACR genie project. Please
 see the documentation at https://heseber.github.io/genie-parser/ for details.
 
-!!! warning
-
-   If you want to contribute to this project by pushing any commits, please copy
-   the git hooks to `.git/hooks`. This is not automatically done by a `git
-   clone`. See the README in the `git-hooks` directory.
+> [!WARNING]
+> If you want to contribute to this project by pushing any commits, please copy
+> the git hooks to `.git/hooks`. This is not automatically done by a `git
+> clone`. See the README in the `git-hooks` directory.
 
 ## Installation of the genie package
 
